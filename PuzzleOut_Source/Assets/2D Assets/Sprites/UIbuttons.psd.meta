@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: 20b3eb204e653ab4aac7549f14124253
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4811202321366404659
+    second: UIbuttons_0
+  - first:
+      213: -7459800983598418723
+    second: UIbuttons_1
+  - first:
+      213: 4855948888318959249
+    second: UIbuttons_2
+  - first:
+      213: 6547765725202488553
+    second: UIbuttons_3
+  - first:
+      213: -5494617154109323233
+    second: UIbuttons_4
+  - first:
+      213: 4146127774654220111
+    second: UIbuttons_5
+  - first:
+      213: -5269683493641933254
+    second: UIbuttons_6
+  - first:
+      213: -5090821761053337641
+    second: UIbuttons_7
+  - first:
+      213: 5479706916521426064
+    second: UIbuttons_8
+  - first:
+      213: -1186710391731903310
+    second: UIbuttons_9
+  - first:
+      213: -8993765091505588546
+    second: UIbuttons_10
+  - first:
+      213: -2446069261275075467
+    second: UIbuttons_11
+  - first:
+      213: 3821397440639833636
+    second: UIbuttons_12
+  - first:
+      213: 7379838897333422552
+    second: UIbuttons_13
+  - first:
+      213: -2895148153333244972
+    second: UIbuttons_14
+  - first:
+      213: 1650639544155484616
+    second: UIbuttons_15
+  - first:
+      213: 8601945402721057073
+    second: UIbuttons_16
+  - first:
+      213: -6808236825260373377
+    second: UIbuttons_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIbuttons_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1422
+        width: 174
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1bb64cafc2b3db0800000000000000
+      internalID: -4811202321366404659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_1
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1416
+        width: 164
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4b1857786797890800000000000000
+      internalID: -7459800983598418723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_2
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1414
+        width: 163
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e54b739cbc36340800000000000000
+      internalID: 4855948888318959249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1409
+        width: 164
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec1c2b4c365eda50800000000000000
+      internalID: 6547765725202488553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_4
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1412
+        width: 167
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18cb806fc23fb3b0800000000000000
+      internalID: -5494617154109323233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1049
+        width: 182
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4745a17e310a8930800000000000000
+      internalID: 4146127774654220111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_6
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 725
+        width: 174
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3eabb258c25ed6b0800000000000000
+      internalID: -5269683493641933254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_7
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 507
+        width: 372
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d75695a494c959b0800000000000000
+      internalID: -5090821761053337641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_8
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 380
+        width: 157
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cb2886864db0c40800000000000000
+      internalID: 5479706916521426064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_9
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 386
+        width: 274
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b42e89af25f78fe0800000000000000
+      internalID: -1186710391731903310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 225
+        width: 241
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6308fdc4abf2380800000000000000
+      internalID: -8993765091505588546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_11
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 219
+        width: 329
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c62b977f0dd0ed0800000000000000
+      internalID: -2446069261275075467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_12
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 544
+        width: 155
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4269ce2c9b4580530800000000000000
+      internalID: 3821397440639833636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_13
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 389
+        width: 122
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d94b2780647a6660800000000000000
+      internalID: 7379838897333422552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_14
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 225
+        width: 245
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db917cf71e52d7d0800000000000000
+      internalID: -2895148153333244972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 577
+        width: 363
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1b9918bef38e610800000000000000
+      internalID: 1650639544155484616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_16
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 424
+        width: 365
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1393e7ac4cf306770800000000000000
+      internalID: 8601945402721057073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIbuttons_17
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 244
+        width: 324
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a4f93dda84481a0800000000000000
+      internalID: -6808236825260373377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

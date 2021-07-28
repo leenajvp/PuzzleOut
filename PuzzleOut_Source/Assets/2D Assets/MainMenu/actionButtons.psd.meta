@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 07f29e011fd088640b92d5e08b2ee964
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2951391548247563276
+    second: actionButtons_0
+  - first:
+      213: -8859633735372672944
+    second: actionButtons_1
+  - first:
+      213: -7865853546637630040
+    second: actionButtons_2
+  - first:
+      213: 7957219961004765145
+    second: actionButtons_3
+  - first:
+      213: -7691168042253018876
+    second: actionButtons_4
+  - first:
+      213: -7079923216620487767
+    second: actionButtons_5
+  - first:
+      213: 4466217137905250196
+    second: actionButtons_6
+  - first:
+      213: 4295746963781220073
+    second: actionButtons_7
+  - first:
+      213: 8798413784327227594
+    second: actionButtons_8
+  - first:
+      213: 7774736219457357547
+    second: actionButtons_9
+  - first:
+      213: 8144806432935743469
+    second: actionButtons_10
+  - first:
+      213: 963883193194240844
+    second: actionButtons_11
+  - first:
+      213: 5058218989430417119
+    second: actionButtons_12
+  - first:
+      213: -3727354395653015588
+    second: actionButtons_13
+  - first:
+      213: -9115692888730109146
+    second: actionButtons_14
+  - first:
+      213: 559471448741689930
+    second: actionButtons_15
+  - first:
+      213: -6442107254357769252
+    second: actionButtons_16
+  - first:
+      213: -886011578192707942
+    second: actionButtons_17
+  - first:
+      213: 5529241588578549811
+    second: actionButtons_18
+  - first:
+      213: -3080156152330167380
+    second: actionButtons_19
+  - first:
+      213: 6416271459100446849
+    second: actionButtons_20
+  - first:
+      213: 6644015662383135677
+    second: actionButtons_21
+  - first:
+      213: 6883079609727941020
+    second: actionButtons_22
+  - first:
+      213: 1793374806019361196
+    second: actionButtons_23
+  - first:
+      213: -6053457083924121188
+    second: actionButtons_24
+  - first:
+      213: -7011313387200791964
+    second: actionButtons_25
+  - first:
+      213: 8176395656238891010
+    second: actionButtons_26
+  - first:
+      213: -649617939877756132
+    second: actionButtons_27
+  - first:
+      213: -5797342676110161327
+    second: actionButtons_28
+  - first:
+      213: 8346383324817133735
+    second: actionButtons_29
+  - first:
+      213: -4024407513489388704
+    second: actionButtons_30
+  - first:
+      213: -4808367614529278106
+    second: actionButtons_31
+  - first:
+      213: 9059063933327117545
+    second: actionButtons_32
+  - first:
+      213: 2637265880059488813
+    second: actionButtons_33
+  - first:
+      213: -8505292034261568784
+    second: actionButtons_34
+  - first:
+      213: 7557709983303670930
+    second: actionButtons_35
+  - first:
+      213: -2769856853112514025
+    second: actionButtons_36
+  - first:
+      213: -4288349509766883309
+    second: actionButtons_37
+  - first:
+      213: 8984961210298094495
+    second: actionButtons_38
+  - first:
+      213: -8652990805770854493
+    second: actionButtons_39
+  - first:
+      213: -804835321299360014
+    second: actionButtons_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: actionButtons_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1019
+        width: 167
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f32d95260d8a07d0800000000000000
+      internalID: -2951391548247563276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 879
+        width: 134
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0507b0bde024c0580800000000000000
+      internalID: -8859633735372672944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 739
+        width: 177
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5ea69dfdfd6d290800000000000000
+      internalID: -7865853546637630040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_3
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 597
+        width: 212
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df26573569bd6e60800000000000000
+      internalID: 7957219961004765145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 447
+        width: 85
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4091ca54a6b734590800000000000000
+      internalID: -7691168042253018876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 318
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab7b44785f0fbd90800000000000000
+      internalID: -7079923216620487767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_6
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 178
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49faa9ae2d03bfd30800000000000000
+      internalID: 4466217137905250196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 37
+        width: 97
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6742d8a1f8d9b30800000000000000
+      internalID: 4295746963781220073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: actionButtons_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1025
+        width: 134
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac889b988be3a1a70800000000000000
+      internalID: 8798413784327227594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f3ccd85fb19850f4f934972c4aa37a2e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
