@@ -10,7 +10,6 @@ public class FadeOut : MonoBehaviour
 
     void Start()
     {
-        //test comment
         Txt = GetComponent<CanvasGroup>();
     }
 
