@@ -67,6 +67,14 @@ public class ElectricDoor : MonoBehaviour, IInteractive, IActivator
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            OpenDoor();
+        }
+    }
+
     private void OnMouseDown()
     {
         if (isUnlocked == true)
