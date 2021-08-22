@@ -156,7 +156,7 @@ public class NPCMovement : InteractiveObjects
 
     private void Move()
     {
-        animState.SetInteger("AnimState", 1);
+        animState.SetInteger("AnimStateC, 1);
         finalQuestion.SetActive(false);
         CheckInventory();
         Agent.isStopped = false;
