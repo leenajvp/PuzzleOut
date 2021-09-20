@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: ee67a7001b846d24db2184124620b22f
+guid: d32cacc7382e4b9458d7f6dc973b192a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -887982601649841707
-    second: metarig|metarigAction
+    second: Idle1
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: metarig|metarigAction
+      name: Idle1
       takeName: metarig|metarigAction
       internalID: 0
       firstFrame: 0

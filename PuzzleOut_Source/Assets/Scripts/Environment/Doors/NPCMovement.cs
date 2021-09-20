@@ -156,7 +156,7 @@ public class NPCMovement : InteractiveObjects
 
     private void Move()
     {
-        animState.SetInteger("AnimStateC", 1);
+        animState.SetInteger("AnimState", 1);
         finalQuestion.SetActive(false);
         CheckInventory();
         Agent.isStopped = false;
@@ -307,7 +307,7 @@ public class NPCMovement : InteractiveObjects
     {
         animState.SetInteger("AnimState", 4);
 
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(2f);
 
         InstantiateKey();
 

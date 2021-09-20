@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9c2217baddf64ea46a8f38f083b39e62
+guid: c9c0e4ee09e5200498265336dd61c9a7
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -887982601649841707
-    second: Walking1
+      74: -3773528098017054933
+    second: metarig.001|metarig.001Action
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walking1
-      takeName: metarig|metarigAction
+      name: metarig.001|metarig.001Action
+      takeName: metarig.001|metarig.001Action
       internalID: 0
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -118,12 +118,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d32cacc7382e4b9458d7f6dc973b192a,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

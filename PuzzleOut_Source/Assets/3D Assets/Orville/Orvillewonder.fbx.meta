@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9c2217baddf64ea46a8f38f083b39e62
+guid: 5002c987cd4a8ee4ea31bc30a50ad52b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -887982601649841707
-    second: Walking1
+      74: -2463781497245029270
+    second: WonderIdle1
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walking1
-      takeName: metarig|metarigAction
+      name: WonderIdle1
+      takeName: metarig|metarigAction.001
       internalID: 0
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 295
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
