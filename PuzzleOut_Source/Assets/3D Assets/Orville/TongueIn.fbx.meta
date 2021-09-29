@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: c9c0e4ee09e5200498265336dd61c9a7
+guid: 44adcf9b00b8cba4a9cf10046fdea179
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -3773528098017054933
-    second: metarig.001|metarig.001Action
+      74: 4393521751741012727
+    second: TongueIn
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,18 +35,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: metarig.001|metarig.001Action
-      takeName: metarig.001|metarig.001Action
+      name: TongueIn
+      takeName: metarig.001|metarig.001Action.001
       internalID: 0
       firstFrame: 0
-      lastFrame: 200
+      lastFrame: 89
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -118,12 +118,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d32cacc7382e4b9458d7f6dc973b192a,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
