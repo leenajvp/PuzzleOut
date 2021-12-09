@@ -4,7 +4,7 @@ public class KeyboardController : MonoBehaviour
 {
     private KeyboardController Inputs => FindObjectOfType<KeyboardController>();
 
-    [Header("ControlScript")]
+    [Header("Default Keyboard Controls")]
     [SerializeField] public KeyCode forward = KeyCode.UpArrow;
     [SerializeField] public KeyCode backward = KeyCode.DownArrow;
     [SerializeField] public KeyCode right = KeyCode.RightArrow;
