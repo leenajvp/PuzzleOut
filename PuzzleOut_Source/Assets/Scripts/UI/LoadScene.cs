@@ -9,7 +9,6 @@ public class LoadScene : MonoBehaviour
         StartCoroutine(LoadSyncOp());
     }
 
-
     private IEnumerator LoadSyncOp()
     {
         AsyncOperation loadLevel = SceneManager.LoadSceneAsync("Level1");

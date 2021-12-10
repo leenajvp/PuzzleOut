@@ -15,24 +15,32 @@ public class Collectable : InteractiveObjects, ICollectable, IInteractive
         Mirror
     }
 
-    [SerializeField] protected ObjectType objectType = ObjectType.Random;
+    [SerializeField] 
+    protected ObjectType objectType = ObjectType.Random;
 
-    [SerializeField] protected GameObject itemHoldPos;
+    [SerializeField] 
+    protected GameObject itemHoldPos;
     [Tooltip("Called by Script Breakable object, if true, object will break on when colliding with walls or floor")]
-    [SerializeField] protected bool breakThis = false;
-    [SerializeField] protected bool isCollected = false;
+    [SerializeField] 
+    protected bool breakThis = false;
+    [SerializeField] 
+    protected bool isCollected = false;
 
     [Header("Sound Effects")]
-    [SerializeField] private AudioSource CollectSound = null;
+    [SerializeField] 
+    private AudioSource CollectSound = null;
 
     [Header("Object AddForce When Dropped")]
-    [SerializeField] protected float throwStrenght = 30f;
+    [SerializeField] 
+    protected float throwStrenght = 30f;
 
-    protected Rigidbody Rb => gameObject.GetComponent<Rigidbody>();
+    protected Rigidbody rb;
 
     protected new void Start()
     {
         base.Start();
+
+        rb = gameObject.GetComponent<Rigidbody>();
 
         isCollected = false;
         isAvailable = true;
@@ -54,7 +62,7 @@ public class Collectable : InteractiveObjects, ICollectable, IInteractive
             transform.parent = itemHoldPos.transform;
             transform.localPosition = Vector3.zero;
             transform.localEulerAngles = Vector3.zero;
-            Rb.isKinematic = true;
+            rb.isKinematic = true;
             isCollected = true;
 
             if (CollectSound != null)
@@ -78,8 +86,8 @@ public class Collectable : InteractiveObjects, ICollectable, IInteractive
         objectList.Remove(cObject);
 
         transform.parent = null;
-        Rb.isKinematic = false;
-        Rb.AddForce(transform.forward * throwStrenght);
+        rb.isKinematic = false;
+        rb.AddForce(transform.forward * throwStrenght);
         breakThis = true;
     }
 }

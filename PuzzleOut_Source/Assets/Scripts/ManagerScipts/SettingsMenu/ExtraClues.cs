@@ -12,24 +12,32 @@ public class ExtraClues : MonoBehaviour
         Third
     }
     [Tooltip("If the clues level is passed, remove clue")]
-    [SerializeField] private ClueLevel clueLevel = ClueLevel.First;
+    [SerializeField] 
+    private ClueLevel clueLevel = ClueLevel.First;
 
     [Tooltip("Guide player how to trigger clue")]
-    [SerializeField] private GameObject extraClueUI = null;
-    [SerializeField] private GameObject extraCluePanel = null;
-    [SerializeField] private AudioSource extraClue = null;
+    [SerializeField] 
+    private GameObject extraClueUI = null;
+    [SerializeField] 
+    private GameObject extraCluePanel = null;
+    [SerializeField] 
+    private AudioSource extraClue = null;
     [Tooltip("After triggering, how long to activate this clue")]
-    [SerializeField] private float triggerTime = 300f;
+    [SerializeField] 
+    private float triggerTime = 300f;
     [Tooltip("Reading Time for clue")]
-    [SerializeField] private float removeTIme = 5f;
+    [SerializeField] 
+    private float removeTIme = 5f;
 
     public float existingTime = 0f;
     private bool isActivated = false;
     private bool isAvailable = false;
 
     [Header("Dialogue Text")]
-    [SerializeField] private string dialogue = "";
-    [SerializeField] private Text textArea = null;
+    [SerializeField] 
+    private string dialogue = "";
+    [SerializeField] 
+    private Text textArea = null;
 
     void Start()
     {

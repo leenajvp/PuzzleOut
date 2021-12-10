@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,7 +6,8 @@ using UnityEngine.AI;
 
 public class NPCMovement : InteractiveObjects
 {
-    [SerializeField] private enum NpcState
+    [SerializeField]
+    private enum NpcState
     {
         Idle,
         MaintainDistance,
@@ -20,44 +20,65 @@ public class NPCMovement : InteractiveObjects
         Unavailable
     }
 
-    [SerializeField] private NpcState CurrentState;
+    [SerializeField] 
+    private NpcState CurrentState;
 
-    [Header ("Maintain Distance from player")]
-    [SerializeField] private float minDistance = 3;
-    [SerializeField] private float interactionDistance = 1;
-    [SerializeField] private float distanceToPlayer;
+    [Header("Maintain Distance from player")]
+    [SerializeField] 
+    private float minDistance = 3;
+    [SerializeField] 
+    private float interactionDistance = 1;
+    [SerializeField] 
+    private float distanceToPlayer;
 
     [Header("Set Targets")]
-    [SerializeField] private Transform[] targets = null;
+    [SerializeField] 
+    private Transform[] targets = null;
     private int setTargets = 0;
 
     [Header("Final Question")]
-    [SerializeField] private GameObject finalQuestion = null;
-    [SerializeField] private GameObject key = null;
-    [SerializeField] private GameObject dropPos = null;
-    [SerializeField] private KeyCode yes = KeyCode.Alpha1;
-    [SerializeField] private KeyCode no = KeyCode.Alpha2;
+    [SerializeField] 
+    private GameObject finalQuestion = null;
+    [SerializeField] 
+    private GameObject key = null;
+    [SerializeField] 
+    private GameObject dropPos = null;
+    [SerializeField] 
+    private KeyCode yes = KeyCode.Alpha1;
+    [SerializeField] 
+    private KeyCode no = KeyCode.Alpha2;
     public bool giveKey;
 
     [Header("SoundEffects")]
     [Header("Player Reactions")]
-    [SerializeField] private AudioSource KeyReaction = null;
-    [SerializeField] private AudioSource DeadReaction = null;
-    private int currentAnim => animState.GetInteger("AnimState");
+    [SerializeField] 
+    private AudioSource KeyReaction = null;
+    [SerializeField] 
+    private AudioSource DeadReaction = null;
+    private int currentAnim;
 
     [Header("EndGame")]
-    [SerializeField] private GameObject blackPanel = null;
-    private SceneMngr SceneManager => FindObjectOfType<SceneMngr>();
-    private GameMngr GameManager => FindObjectOfType<GameMngr>();
+    [SerializeField] 
+    private GameObject blackPanel = null;
+    private SceneMngr SceneManager;
+    private GameMngr GameManager;
 
-    private Animator animState;
+    private Animator animator;
+    private static readonly int animState = Animator.StringToHash("AnimState");
 
-    private NavMeshAgent Agent => GetComponent<NavMeshAgent>();
+    private NavMeshAgent Agent;
 
-    private new void Start() 
-    { 
+    private new void Start()
+    {
         base.Start();
-        animState = GetComponent<Animator>();
+
+        animator = GetComponent<Animator>();
+        currentAnim = animator.GetInteger(animState);
+        SceneManager = FindObjectOfType<SceneMngr>();
+        GameManager = FindObjectOfType<GameMngr>();
+        Agent = GetComponent<NavMeshAgent>();
+
+        
         finalQuestion.SetActive(false);
         Physics.GetIgnoreLayerCollision(9, 8);
         blackPanel.SetActive(false);
@@ -86,7 +107,6 @@ public class NPCMovement : InteractiveObjects
             case NpcState.CheckItem:
 
                 CheckInventory();
-                
 
                 break;
 
@@ -102,7 +122,7 @@ public class NPCMovement : InteractiveObjects
                 break;
 
             case NpcState.GiveKey:
-                
+
                 StartCoroutine(RevealKey());
 
                 break;
@@ -128,7 +148,7 @@ public class NPCMovement : InteractiveObjects
             default:
 
                 CurrentState = NpcState.Idle;
-                
+
                 break;
         }
     }
@@ -136,7 +156,7 @@ public class NPCMovement : InteractiveObjects
     private void StayStill()
     {
         Agent.isStopped = true;
-        animState.SetInteger("AnimState", 0);
+        animator.SetInteger(animState, 0);
     }
 
     private void CheckForPlayer()
@@ -156,7 +176,7 @@ public class NPCMovement : InteractiveObjects
 
     private void Move()
     {
-        animState.SetInteger("AnimState", 1);
+        animator.SetInteger(animState, 1);
         finalQuestion.SetActive(false);
         CheckInventory();
         Agent.isStopped = false;
@@ -176,7 +196,7 @@ public class NPCMovement : InteractiveObjects
             if (!Agent.pathPending && Agent.remainingDistance < 0.2f)
             {
                 CurrentState = NpcState.Idle;
-                
+
             }
         }
     }
@@ -214,9 +234,9 @@ public class NPCMovement : InteractiveObjects
 
     private void ReceiveCorrect()
     {
-        animState.SetInteger("AnimState", 2);
+        animator.SetInteger(animState, 2);
 
-        if (inventory.CollectedObjects.Count==0)
+        if (inventory.CollectedObjects.Count == 0)
         {
             CurrentState = NpcState.MaintainDistance;
             finalQuestion.SetActive(false);
@@ -225,7 +245,7 @@ public class NPCMovement : InteractiveObjects
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         Agent.isStopped = true;
 
-        animState.SetInteger("AnimState", 2);
+        animator.SetInteger(animState, 2);
         Agent.isStopped = true;
 
         LookAtTarget();
@@ -265,7 +285,7 @@ public class NPCMovement : InteractiveObjects
 
     private void ReceiveWrong()
     {
-        animState.SetInteger("AnimState", 2);
+        animator.SetInteger(animState, 2);
 
         if (inventory.CollectedObjects.Count == 0)
         {
@@ -274,7 +294,7 @@ public class NPCMovement : InteractiveObjects
 
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        animState.SetInteger("AnimState", 2);
+        animator.SetInteger(animState, 2);
         Agent.isStopped = true;
 
         LookAtTarget();
@@ -285,7 +305,7 @@ public class NPCMovement : InteractiveObjects
 
             if (Input.GetKey(yes))
             {
-                
+
                 finalQuestion.SetActive(false);
                 CurrentState = NpcState.Kill;
             }
@@ -305,13 +325,13 @@ public class NPCMovement : InteractiveObjects
 
     private IEnumerator RevealKey()
     {
-        animState.SetInteger("AnimState", 4);
+        animator.SetInteger(animState, 4);
 
         yield return new WaitForSeconds(2f);
 
         InstantiateKey();
 
-        animState.SetInteger("AnimState", 5);
+        animator.SetInteger(animState, 5);
 
         PlayerInventory inventory = player.GetComponent<PlayerInventory>();
 
@@ -319,11 +339,11 @@ public class NPCMovement : InteractiveObjects
         {
             if (inventory.CollectedObjects[i].name == "Key")
             {
-                animState.SetInteger("AnimState", 6);
+                animator.SetInteger(animState, 6);
 
                 yield return new WaitForSeconds(0.9f);
 
-                animState.SetInteger("AnimState", 1);
+                animator.SetInteger(animState, 1);
                 CurrentState = NpcState.Unavailable;
             }
         }
@@ -357,7 +377,7 @@ public class NPCMovement : InteractiveObjects
             DeadReaction.Stop();
         }
 
-        animState.SetInteger("AnimState", 3);
+        animator.SetInteger(animState, 3);
 
         yield return new WaitForSeconds(1);
 
@@ -383,7 +403,7 @@ public class NPCMovement : InteractiveObjects
         {
             if (!Agent.pathPending && Agent.remainingDistance < 0.2f)
             {
-                animState.SetInteger("AnimState", 1);
+                animator.SetInteger(animState, 1);
                 Agent.destination = targets[setTargets].position;
                 setTargets = Random.Range(0, targets.Length);
             }
@@ -395,7 +415,7 @@ public class NPCMovement : InteractiveObjects
         {
             if (!Agent.pathPending && Agent.remainingDistance < 0.2f)
             {
-                animState.SetInteger("AnimState", 0);
+                animator.SetInteger(animState, 0);
             }
         }
     }
@@ -405,7 +425,7 @@ public class NPCMovement : InteractiveObjects
         Agent.isStopped = false;
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         finalQuestion.SetActive(false);
-        animState.SetInteger("AnimState", 1);
+        animator.SetInteger(animState, 1);
 
 
         if (distanceToPlayer <= minDistance)

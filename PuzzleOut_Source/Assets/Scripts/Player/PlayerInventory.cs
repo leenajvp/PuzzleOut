@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public List<Collectable> CollectedObjects = new List<Collectable>();
-    [SerializeField] private GameObject dropItem = null;
+    [SerializeField] 
+    private GameObject dropItem = null;
 
     private void Update()
     {

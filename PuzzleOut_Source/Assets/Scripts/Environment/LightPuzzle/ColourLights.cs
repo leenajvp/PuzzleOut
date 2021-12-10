@@ -7,7 +7,7 @@ public class ColourLights : MonoBehaviour, IInteractive
     public Light adjustableLight;
     public GameObject lightBulb;
     public int currentColor, length;
-    private Renderer Render => lightBulb.GetComponent<Renderer>();
+    private Renderer lightRenderer;
 
     [Header("Colour to pass")]
     public int correctColour;
@@ -15,20 +15,24 @@ public class ColourLights : MonoBehaviour, IInteractive
     public bool isAvailable { get; set; }
 
     [Header("Colour Blind / Extra Cues")]
-    [SerializeField] private GameObject cue = null;
+    [SerializeField] 
+    private GameObject cue = null;
 
-    private AudioSource flickerSound => adjustableLight.GetComponent<AudioSource>();
+    private AudioSource flickerSound;
 
     void Start()
     {
+        lightRenderer = lightBulb.GetComponent<Renderer>();
+        flickerSound = adjustableLight.GetComponent<AudioSource>();
+
         cue.SetActive(false);
 
-        if (PlayerPrefs.GetInt("Second") == 1)
+        if (PlayerPrefs.GetInt("SecondRoomCompleted") == 1)
         {
             isAvailable = false;
             adjustableLight.color = colors[correctColour];
             currentColor = correctColour;
-            Render.material.SetColor("_EmissionColor", colors[correctColour]);
+            lightRenderer.material.SetColor("_EmissionColor", colors[correctColour]);
         }
 
         else
@@ -38,7 +42,7 @@ public class ColourLights : MonoBehaviour, IInteractive
             currentColor = 0;
             length = colors.Length;
             adjustableLight.color = colors[currentColor];
-            Render.material.SetColor("_EmissionColor", colors[currentColor]);
+            lightRenderer.material.SetColor("_EmissionColor", colors[currentColor]);
         }
     }
 
@@ -68,7 +72,7 @@ public class ColourLights : MonoBehaviour, IInteractive
         {
             currentColor = (currentColor + 1) % length;
             adjustableLight.color = colors[currentColor];
-            Render.material.SetColor("_EmissionColor", colors[currentColor]);
+            lightRenderer.material.SetColor("_EmissionColor", colors[currentColor]);
         }
     }
 

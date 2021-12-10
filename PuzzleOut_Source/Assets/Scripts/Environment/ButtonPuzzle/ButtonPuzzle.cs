@@ -8,31 +8,44 @@ public class ButtonPuzzle : MonoBehaviour, IInteractive
     public bool isAvailable { get; set; }
 
     [Header ("Enter Correct code")]
-    [SerializeField] private Camera objectCamera = null;
-    [SerializeField] private KeyCode[] correctCode = null;
+    [SerializeField] 
+    private Camera objectCamera = null;
+    [SerializeField] 
+    private KeyCode[] correctCode = null;
     private int enteredCode = 0;
 
     [Header("Door to open")]
-    [SerializeField] private GameObject door = null;
-    private ElectricDoor Edoor => door.GetComponent<ElectricDoor>();
+    [SerializeField] 
+    private GameObject door = null;
+    private ElectricDoor Edoor;
 
     [Header ("Scale buttons on click")]
-    [SerializeField] private GameObject[] buttons = null;
-    [SerializeField] Vector3 defaultScale = new Vector3 (0.2f,0.3f,0.6f);
-    [SerializeField] Vector3 pressedScale = new Vector3 (0.2f,0.4f,0.6f);
+    [SerializeField] 
+    private GameObject[] buttons = null;
+    [SerializeField]
+    private Vector3 defaultScale = new Vector3 (0.2f,0.3f,0.6f);
+    [SerializeField]
+    private Vector3 pressedScale = new Vector3 (0.2f,0.4f,0.6f);
 
     [Header("Sound Effects")]
-    [SerializeField] private AudioSource ButtonPress = null;
-    [SerializeField] private AudioSource lockOpen = null;
+    [SerializeField] 
+    private AudioSource ButtonPress = null;
+    [SerializeField] 
+    private AudioSource lockOpen = null;
     
     [Header ("UI Elements")]
-    [SerializeField] private GameObject buttonUI = null;
-    [SerializeField] private GameObject savingImage = null;
+    [SerializeField] 
+    private GameObject buttonUI = null;
+    [SerializeField] 
+    private GameObject savingImage = null;
 
-    protected ViewManager ObjectManager => FindObjectOfType<ViewManager>();
+    protected ViewManager ObjectManager; 
 
     private void Start()
     {
+        Edoor = door.GetComponent<ElectricDoor>();
+        ObjectManager = FindObjectOfType<ViewManager>();
+
         savingImage.SetActive(false);
         
 
@@ -58,6 +71,11 @@ public class ButtonPuzzle : MonoBehaviour, IInteractive
     }
 
     private void Update() 
+    {
+        ActivatePuzzle();
+    }
+
+    private void ActivatePuzzle()
     {
         if (isAvailable && objectCamera.enabled == true)
         {
@@ -86,7 +104,7 @@ public class ButtonPuzzle : MonoBehaviour, IInteractive
         
         isAvailable = false;
         
-        PlayerPrefs.SetInt("First", 1);
+        PlayerPrefs.SetInt("FirstRoomCompleted", 1);
 
         StartCoroutine(Saving());
     }
@@ -107,10 +125,9 @@ public class ButtonPuzzle : MonoBehaviour, IInteractive
         }
     }
 
+    // Scale buttons based on keyboard inputs
     private void PressButton()
     {
-        
-
         for (var i = 0; i < buttons.Length; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -150,6 +167,7 @@ public class ButtonPuzzle : MonoBehaviour, IInteractive
         }
     }
 
+    //Set buttons to original scale
     private void ReturnButtons()
     {
         for (var i = 0; i < buttons.Length; i++)

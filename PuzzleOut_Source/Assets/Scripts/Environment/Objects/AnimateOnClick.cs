@@ -5,17 +5,24 @@
 public class AnimateOnClick : MonoBehaviour
 {
     public bool isAvailable { get; set; }
-    private Animator Anim => GetComponent<Animator>();
-    private AudioSource Sound => GetComponent<AudioSource>();
+    private Animator anim;
+    private AudioSource sound;
 
-    private IInteractive Availability => GetComponent<IInteractive>();
+    private IInteractive availability;
+
+    private void Start()
+    {
+        anim= GetComponent<Animator>();
+        sound= GetComponent<AudioSource>();
+        availability= GetComponent<IInteractive>();
+    }
 
     private void OnMouseDown()
     {
-        if (Availability.isAvailable == true)
+        if (availability.isAvailable == true)
         {
-            Sound.Play();
-            Anim.SetTrigger("play");
+            sound.Play();
+            anim.SetTrigger("play");
         }
     }
 }

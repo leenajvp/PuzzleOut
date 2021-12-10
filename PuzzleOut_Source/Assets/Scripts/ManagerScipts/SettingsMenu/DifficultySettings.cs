@@ -2,8 +2,10 @@
 
 public class DifficultySettings : MonoBehaviour
 {
-    [SerializeField] private GameObject[] easyLevel;
-    [SerializeField] private GameObject[] mediumLevel;
+    [SerializeField] 
+    private GameObject[] easyLevel;
+    [SerializeField] 
+    private GameObject[] mediumLevel;
 
     private void Awake()
     {

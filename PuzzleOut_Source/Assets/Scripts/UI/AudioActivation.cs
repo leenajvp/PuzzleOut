@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
-
 public class AudioActivation : MonoBehaviour, IAudio
 {
-    [SerializeField] protected bool isActivated;
-    [SerializeField] private AudioSource AudioToPlay => GetComponent<AudioSource>();
+    [SerializeField] 
+    protected bool isActivated;
+    [SerializeField]
+    private AudioSource audioToPlay; 
     public bool isAvailable { get; set; }
 
     private void Start()
     {
+        audioToPlay = GetComponent<AudioSource>();
         isAvailable = true;
         gameObject.layer = 13;
     }
@@ -16,7 +18,7 @@ public class AudioActivation : MonoBehaviour, IAudio
     {
         if (isAvailable == true)
         {
-            AudioToPlay.Play();
+            audioToPlay.Play();
             isActivated = true;
             isAvailable = false;
         }

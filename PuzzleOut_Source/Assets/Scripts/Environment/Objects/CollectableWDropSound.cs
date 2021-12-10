@@ -4,13 +4,19 @@
 
 public class CollectableWDropSound : Collectable
 {
-    private AudioSource DropSound => GetComponent<AudioSource>();
+    private AudioSource dropSound; 
+
+    private new void Start()
+    {
+        base.Start();
+        dropSound = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == ("Environment"))
         {
-            DropSound.Play();
+            dropSound.Play();
         }
     }
 }

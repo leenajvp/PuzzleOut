@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class TextTyping : MonoBehaviour
 {
-    [SerializeField] private float timer = 0.1f;
+    [SerializeField] 
+    private float timer = 0.1f;
 
-    [SerializeField] private string partOne;
-    [SerializeField] private string ptOneCurrent = "";
+    [SerializeField] 
+    private string partOne;
+    [SerializeField] 
+    private string ptOneCurrent = "";
 
-    // Start is called before the first frame update
     private void Start() => StartCoroutine(IntroTextEntry());
 
     private IEnumerator IntroTextEntry()

@@ -12,11 +12,14 @@ public class TxtDialogue : MonoBehaviour, IDialogue
     }
 
     [Tooltip("How is this dialogue triggered")]
-    [SerializeField] private TriggerMethod triggerMethod = TriggerMethod.Raycast;
+    [SerializeField] 
+    private TriggerMethod triggerMethod = TriggerMethod.Raycast;
 
     [Tooltip("Required to work")]
-    [SerializeField] GameObject dialoguePanel;
-    [SerializeField] private float dialogueTime = 5f;
+    [SerializeField] 
+    private GameObject dialoguePanel;
+    [SerializeField] 
+    private float dialogueTime = 5f;
     public string dialogue = "";
     public bool dialogueAvailable { get; set; }
 

@@ -6,7 +6,8 @@ public class PanelFade : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
     private float zeroAlpha = 0f;
-    [SerializeField] private float speed = 0.1f;
+    [SerializeField] 
+    private float speed = 0.1f;
 
     void Start()
     {

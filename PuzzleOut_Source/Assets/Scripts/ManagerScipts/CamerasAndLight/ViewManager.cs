@@ -10,7 +10,8 @@ public class ViewManager : PlayerDeactivator
 
     [Header("Lights")]
     public Light defaultLight, defaultLightCenter = null;
-    [SerializeField] private Light[] objLights = null;
+    [SerializeField] 
+    private Light[] objLights = null;
 
     [Header("Force camera back to default")]
     public bool camIsForced = false;

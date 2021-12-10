@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class IntroTextTimer : MonoBehaviour
 {
-    [SerializeField] protected GameObject[] uiObjects;
+    [SerializeField] 
+    protected GameObject[] uiObjects;
 
     private void Start()
     {

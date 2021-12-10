@@ -10,22 +10,28 @@ public class ElectricDoor : MonoBehaviour, IInteractive, IActivator
     public bool isPassed { get; set; }
 
     [Header("Lock lights")]
-    [SerializeField] private GameObject lockLight = null;
+    [SerializeField] 
+    private GameObject lockLight = null;
     public Color opened;
 
     [Header("Sound Effects")]
-    [SerializeField] private AudioSource doorSlide;
-    [SerializeField] private AudioSource locked;
+    [SerializeField] 
+    private AudioSource doorSlide;
+    [SerializeField] 
+    private AudioSource locked;
 
     [Header("Dialogue Text")]
     [Tooltip("Fill fields if object has a dialogue reaction")]
     [Header("Dialogue Text")]
-    [SerializeField] protected Text textArea = null;
+    [SerializeField] 
+    protected Text textArea = null;
     protected IDialogue DialogueTxt = null;
 
     [Header("Open Door")]
-    [SerializeField] private float doorOpenAngle = 55.0f;
-    [SerializeField] private float speed = 0.01f;
+    [SerializeField] 
+    private float doorOpenAngle = 55.0f;
+    [SerializeField] 
+    private float speed = 0.01f;
     private float defaultRotationAngle;
     private float currentRotationAngle;
     private float openTime = 0;
@@ -98,7 +104,6 @@ public class ElectricDoor : MonoBehaviour, IInteractive, IActivator
             locked.Play();
             SetTextArea(DialogueTxt.GetDialogue());
         }
-
     }
 
     public void OpenLock()
@@ -107,7 +112,6 @@ public class ElectricDoor : MonoBehaviour, IInteractive, IActivator
         lockLight.GetComponent<Renderer>().material.SetColor("_EmissionColor", opened);
         isAvailable = true;
         isUnlocked = true;
-
     }
 
     private void OpenDoor()

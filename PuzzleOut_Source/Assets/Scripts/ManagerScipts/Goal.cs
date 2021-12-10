@@ -6,14 +6,18 @@ using UnityEngine.Rendering.Universal;
 public class Goal : MonoBehaviour
 {
     [Header("SoundEffects")]
-    [SerializeField] private AudioSource ambient = null;
-    [SerializeField] private AudioSource breathing = null;
+    [SerializeField] 
+    private AudioSource ambient = null;
+    [SerializeField] 
+    private AudioSource breathing = null;
 
     [Header("SoundEffects")]
-    [SerializeField] private GameObject blackScreen = null;
-    [SerializeField] private float endTimer = 0f;
+    [SerializeField] 
+    private GameObject blackScreen = null;
+    [SerializeField] 
+    private float endTimer = 0f;
 
-    private Volume Volume => GetComponent<Volume>();
+    private Volume volume; 
     private ColorAdjustments color;
     private ChromaticAberration ca;
     private LensDistortion ld;
@@ -25,25 +29,26 @@ public class Goal : MonoBehaviour
 
     void Start()
     {
+        volume = GetComponent<Volume>();
         blackScreen.SetActive(false);
 
         ColorAdjustments c;
 
-        if (Volume.profile.TryGet<ColorAdjustments>(out c))
+        if (volume.profile.TryGet<ColorAdjustments>(out c))
         {
             color = c;
         }
 
         ChromaticAberration a;
 
-        if (Volume.profile.TryGet<ChromaticAberration>(out a))
+        if (volume.profile.TryGet<ChromaticAberration>(out a))
         {
             ca = a;
         }
 
         LensDistortion d;
 
-        if (Volume.profile.TryGet<LensDistortion>(out d))
+        if (volume.profile.TryGet<LensDistortion>(out d))
         {
             ld = d;
         }

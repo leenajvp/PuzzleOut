@@ -107,8 +107,8 @@ public class SceneMngr : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        PlayerPrefs.SetInt("First", 0);
-        PlayerPrefs.SetInt("Second", 0);
+        PlayerPrefs.SetInt("FirstRoomCompleted", 0);
+        PlayerPrefs.SetInt("SecondRoomCompleted", 0);
         SceneManager.LoadScene("LoadingScene");
     }
 
@@ -118,8 +118,8 @@ public class SceneMngr : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        PlayerPrefs.GetInt("First");
-        PlayerPrefs.GetInt("Second");
+        PlayerPrefs.GetInt("FirstRoomCompleted");
+        PlayerPrefs.GetInt("SecondRoomCompleted");
         SceneManager.LoadScene("LoadingScene");
     }
 

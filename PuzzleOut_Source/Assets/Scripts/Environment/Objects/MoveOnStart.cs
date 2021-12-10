@@ -4,10 +4,11 @@
 public class MoveOnStart : MonoBehaviour
 {
     [SerializeField] private float moveStrenght = 1f;
-    private Rigidbody Rb => GetComponent<Rigidbody>();
+    private Rigidbody rb;
 
     private void Start()
     {
-        Rb.AddForce(transform.forward * moveStrenght * 10);
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * moveStrenght * 10);
     }
 }

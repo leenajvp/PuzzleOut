@@ -2,10 +2,12 @@
 
 [RequireComponent(typeof(CanvasGroup))]
 
-public class FadeOut : MonoBehaviour
+public class TextFadeOut : MonoBehaviour
 {
-    [SerializeField] private float existingTime = 0f;
-    [SerializeField] private float removeAfterSeconds = 1f;
+    [SerializeField] 
+    private float existingTime = 0f;
+    [SerializeField] 
+    private float removeAfterSeconds = 1f;
     private CanvasGroup Txt;
 
     void Start()

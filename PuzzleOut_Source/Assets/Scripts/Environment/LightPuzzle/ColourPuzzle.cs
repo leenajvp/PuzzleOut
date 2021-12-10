@@ -5,19 +5,27 @@ public class ColourPuzzle : MonoBehaviour
 {
     [Header("Light Puzzle")]
     public bool lightsMathced;
-    [SerializeField] private GameObject yellowRoom = null;
-    [SerializeField] private GameObject redRoom = null;
-    [SerializeField] private GameObject purpleRoom = null;
+    [SerializeField] 
+    private GameObject yellowRoom = null;
+    [SerializeField] 
+    private GameObject redRoom = null;
+    [SerializeField] 
+    private GameObject purpleRoom = null;
 
     [Header("Unlocking the door 2")]
-    [SerializeField] private GameObject secondDoor = null;
-    [SerializeField] private bool doorUnLocked = false;
-    private NPCMovement NpcScript => FindObjectOfType<NPCMovement>();
-    [SerializeField] private GameObject npCharacter;
-    [SerializeField] private GameObject savingImage = null;
+    [SerializeField] 
+    private GameObject secondDoor = null;
+    [SerializeField] 
+    private bool doorUnLocked = false;
+    private NPCMovement NpcScript;
+    [SerializeField] 
+    private GameObject npCharacter;
+    [SerializeField] 
+    private GameObject savingImage = null;
 
     [Header("SoundEffects")]
-    [SerializeField] private AudioSource door2Open = null;
+    [SerializeField] 
+    private AudioSource door2Open = null;
 
     public bool redCompl;
     public bool yelCompl;
@@ -29,6 +37,8 @@ public class ColourPuzzle : MonoBehaviour
 
     private void Awake()
     {
+        NpcScript = FindObjectOfType<NPCMovement>();
+
         _Red = redRoom.GetComponent<ColourLights>();
         _Yellow = yellowRoom.GetComponent<ColourLights>();
         _Purple = purpleRoom.GetComponent<ColourLights>();
@@ -43,20 +53,20 @@ public class ColourPuzzle : MonoBehaviour
 
         npCharacter.SetActive(false);
 
-        if (PlayerPrefs.GetInt("First") == 1)
+        if (PlayerPrefs.GetInt("FirstRoomCompleted") == 1)
         {
             lightsMathced = false;
             doorUnLocked = false;
         }
 
-        if (PlayerPrefs.GetInt("Second") == 1)
+        if (PlayerPrefs.GetInt("SecondRoomCompleted") == 1)
         {
             lightsMathced = true;
             doorUnLocked = true;
             secondDoor.GetComponent<ElectricDoor>().isUnlocked = true;
         }
 
-        if ((PlayerPrefs.GetInt("First") == 0) && (PlayerPrefs.GetInt("Second") == 0))
+        if ((PlayerPrefs.GetInt("FirstRoomCompleted") == 0) && (PlayerPrefs.GetInt("SecondRoomCompleted") == 0))
         {
             lightsMathced = false;
             doorUnLocked = false;
@@ -90,10 +100,10 @@ public class ColourPuzzle : MonoBehaviour
     {
         if (doorUnLocked == true)
         {
-            if (PlayerPrefs.GetInt("Second") == 0)
+            if (PlayerPrefs.GetInt("SecondRoomCompleted") == 0)
             {
                 StartCoroutine(Saving());
-                PlayerPrefs.SetInt("Second", 1);
+                PlayerPrefs.SetInt("SecondRoomCompleted", 1);
             }
 
             secondDoor.GetComponent<ElectricDoor>().isUnlocked = true;

@@ -5,35 +5,49 @@ using UnityEngine;
 public class FlickeringLight : MonoBehaviour
 {
     [Header("Set the flicer intensity")]
-    [SerializeField] private float currentValue = 0;
-    [SerializeField] private float minValue = 5;
-    [SerializeField] private float maxValue = 35;
-    [SerializeField] private GameObject lightBulb = null;
-    [SerializeField] private GameObject lightSwitch = null;
+    [SerializeField] 
+    private float currentValue = 0;
+    [SerializeField] 
+    private float minValue = 5;
+    [SerializeField] 
+    private float maxValue = 35;
+    [SerializeField] 
+    private GameObject lightBulb = null;
+    [SerializeField] 
+    private GameObject lightSwitch = null;
 
     [Header("Set the flicer time")]
-    [SerializeField] private float minTime = 0.1f;
-    [SerializeField] private float maxTime = 1;
+    [SerializeField] 
+    private float minTime = 0.1f;
+    [SerializeField] 
+    private float maxTime = 1;
 
-    private Light _light => GetComponent<Light>();
-    private Renderer Render => lightBulb.GetComponent<Renderer>();
-    private ColourLights LightsScript => lightSwitch.GetComponent<ColourLights>();
+    private Light thisLight;
+    private Renderer lightRenderer;
+    private ColourLights LightsScript;
+
+    private void Start()
+    {
+        thisLight = GetComponent<Light>();
+        lightRenderer = lightBulb.GetComponent<Renderer>();
+        LightsScript = lightSwitch.GetComponent<ColourLights>();
+    }
 
     private void FixedUpdate()
     {
         if (LightsScript.currentColor != 0)
         {
-            _light.intensity = currentValue;
+            thisLight.intensity = currentValue;
             StartCoroutine(Flicker());
 
-            if (_light.intensity <= 10)
+            if (thisLight.intensity <= 10)
             {
-                Render.material.SetColor("_EmissionColor", LightsScript.colors[0]);
+                lightRenderer.material.SetColor("_EmissionColor", LightsScript.colors[0]);
             }
 
             else
             {
-                Render.material.SetColor("_EmissionColor", LightsScript.colors[LightsScript.currentColor]);
+                lightRenderer.material.SetColor("_EmissionColor", LightsScript.colors[LightsScript.currentColor]);
             }
         }
 

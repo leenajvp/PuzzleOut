@@ -2,9 +2,18 @@
 
 public class PlayerDeactivator : MonoBehaviour
 {
-    [SerializeField] protected GameObject player;
-    [SerializeField] protected PlayerController1 playerControl => player.GetComponent<PlayerController1>();
-    [SerializeField] protected CameraController cameraControl => player.GetComponent<CameraController>();
+    [SerializeField]
+    protected GameObject player;
+    [SerializeField]
+    protected PlayerController1 playerControl;
+    [SerializeField]
+    protected CameraController cameraControl;
+
+    private void Start()
+    {
+        playerControl = player.GetComponent<PlayerController1>();
+        cameraControl = player.GetComponent<CameraController>();
+    }
 
     protected void PlayerDisable()
     {

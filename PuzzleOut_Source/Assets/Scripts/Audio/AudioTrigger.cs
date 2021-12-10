@@ -8,9 +8,10 @@ public class AudioTrigger : MonoBehaviour
 {
     private bool isAvailable = true;
 
-    [Tooltip("Fill fields if object has a dialogue reaction")]
+    [Tooltip("Fill these fields if the trigger has a dialogue reaction")]
     [Header("Dialogue Text")]
-    [SerializeField] private Text textArea = null;
+    [SerializeField] 
+    private Text textArea = null;
     private IDialogue DialogueTxt = null;
 
     private void Start()

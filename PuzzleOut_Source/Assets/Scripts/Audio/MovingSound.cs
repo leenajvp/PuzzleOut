@@ -15,10 +15,14 @@ public class MovingSound : AudioActivation
     }
 
     [Header("Moving Direction")]
-    [SerializeField] private MoveDir moveDirection = MoveDir.x;
-    [SerializeField] private float moveSpeed = 1;
-    [SerializeField] private float existingTime = 8;
+    [SerializeField] 
+    private MoveDir moveDirection = MoveDir.x;
+    [SerializeField] 
+    private float moveSpeed = 1;
+    [SerializeField] 
+    private float existingTime = 8;
 
+    //Object with sound moves to set direction when activated
     private void Update()
     {
         if (isActivated)
@@ -57,6 +61,7 @@ public class MovingSound : AudioActivation
         }
     }
 
+    //Delete Object after set time
     private IEnumerator RemoveSource()
     {
         yield return new WaitForSeconds(existingTime);

@@ -5,34 +5,47 @@ public class GameMngr : PlayerDeactivator
 {
     [Header("Game Intro")]
     [Header("FlashLight")]
-    [SerializeField] private Light[] playerLights = null;
-    [SerializeField] private AudioSource lightOn = null;
-    [SerializeField] private AudioSource lightOff = null;
+    [SerializeField] 
+    private Light[] playerLights = null;
+    [SerializeField] 
+    private AudioSource lightOn = null;
+    [SerializeField] 
+    private AudioSource lightOff = null;
+
     [Header("PlayerSounds")]
-    [SerializeField] private AudioSource riseUpSeq = null;
-    [SerializeField] private AudioSource deafultBreathing = null;
+    [SerializeField] 
+    private AudioSource riseUpSeq = null;
+    [SerializeField] 
+    private AudioSource deafultBreathing = null;
+
     [Header("UI elements")]
-    [SerializeField] private GameObject mousepointer = null;
-    [SerializeField] private GameObject pauseUI = null;
-    [SerializeField] private GameObject pointerUI = null;
-    [SerializeField] private GameObject dialoguePanel = null;
+    [SerializeField] 
+    private GameObject mousepointer = null;
+    [SerializeField] 
+    private GameObject pauseUI = null;
+    [SerializeField] 
+    private GameObject pointerUI = null;
+    [SerializeField] 
+    private GameObject dialoguePanel = null;
 
     [Header("UI Actions")]
     public bool canPause;
     public bool itemCollected;
     public bool lockedCamera;
-    [SerializeField] private GameObject pausedMenu = null;
+    [SerializeField] 
+    private GameObject pausedMenu = null;
 
     [Header("To remove unwanted objects")]
     [Header("After Level 1")]
-    [SerializeField] private GameObject[] firstLevelObjects = null;
+    [SerializeField] 
+    private GameObject[] firstLevelObjects = null;
 
     [Header("After Level 2")]
-    [SerializeField] private GameObject[] secondLevelObjects = null;
+    [SerializeField] 
+    private GameObject[] secondLevelObjects = null;
 
     void Start()
     {
-
         if (mousepointer == null)
         {
             mousepointer = GameObject.FindGameObjectWithTag("MousePointer");
@@ -48,7 +61,7 @@ public class GameMngr : PlayerDeactivator
         lockedCamera = false;
         pausedMenu.SetActive(false);
 
-        if (PlayerPrefs.GetInt("First") == 1)
+        if (PlayerPrefs.GetInt("FirstRoomCompleted") == 1)
         {
             for (int i = 0; i < firstLevelObjects.Length; i++)
             {
@@ -56,7 +69,7 @@ public class GameMngr : PlayerDeactivator
             }
         }
 
-        if (PlayerPrefs.GetInt("Second") == 1)
+        if (PlayerPrefs.GetInt("SecondRoomCompleted") == 1)
         {
             for (int i = 0; i < secondLevelObjects.Length; i++)
             {
@@ -64,7 +77,7 @@ public class GameMngr : PlayerDeactivator
             }
         }
 
-        if ((PlayerPrefs.GetInt("First") == 0) && (PlayerPrefs.GetInt("Second") == 0))
+        if ((PlayerPrefs.GetInt("FirstRoomCompleted") == 0) && (PlayerPrefs.GetInt("SecondRoomCompleted") == 0))
         {
             for (int i = 0; i < playerLights.Length; i++)
             {

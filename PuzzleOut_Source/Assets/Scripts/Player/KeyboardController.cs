@@ -5,11 +5,11 @@ public class KeyboardController : MonoBehaviour
     private KeyboardController Inputs => FindObjectOfType<KeyboardController>();
 
     [Header("Default Keyboard Controls")]
-    [SerializeField] public KeyCode forward = KeyCode.UpArrow;
-    [SerializeField] public KeyCode backward = KeyCode.DownArrow;
-    [SerializeField] public KeyCode right = KeyCode.RightArrow;
-    [SerializeField] public KeyCode left = KeyCode.LeftArrow;
-    [SerializeField] public KeyCode drop = KeyCode.LeftControl;
+    public KeyCode forward = KeyCode.UpArrow;
+    public KeyCode backward = KeyCode.DownArrow;
+    public KeyCode right = KeyCode.RightArrow;
+    public KeyCode left = KeyCode.LeftArrow;
+    public KeyCode drop = KeyCode.LeftControl;
 
     [Header("Player")]
     [SerializeField] MonoBehaviour target = null;
@@ -20,7 +20,7 @@ public class KeyboardController : MonoBehaviour
     {
         playerCharacter = target as IControls;
 
-        if (PlayerPrefs.GetInt("PlayerControls") == 0)
+        if (PlayerPrefs.GetInt("PlayerControls") == 1)
         {
             Inputs.forward = KeyCode.UpArrow;
             Inputs.backward = KeyCode.DownArrow;

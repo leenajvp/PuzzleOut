@@ -2,10 +2,14 @@
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private GameObject flashLight = null;
-    [SerializeField] private float mSensitivity = 2;
-    [SerializeField] private float maxDown = -60F;
-    [SerializeField] private float maxUp = 60F;
+    [SerializeField] 
+    private GameObject flashLight = null;
+    [SerializeField] 
+    private float mSensitivity = 2;
+    [SerializeField] 
+    private float maxDown = -60F;
+    [SerializeField] 
+    private float maxUp = 60F;
 
     private float rotationY = 0;
 

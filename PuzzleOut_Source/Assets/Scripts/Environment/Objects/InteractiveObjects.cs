@@ -14,11 +14,13 @@ public class InteractiveObjects : MonoBehaviour, IInteractive
     }
 
     [Header("Required Object to pass")]
-    [SerializeField] protected objectOptions requiredObject;
+    [SerializeField]
+    protected objectOptions requiredObject;
 
     [Header("Detect Player")]
-    [SerializeField] protected GameObject player;
-    protected ViewManager ViewMngr => FindObjectOfType<ViewManager>();
+    [SerializeField]
+    protected GameObject player;
+    protected ViewManager viewManager;
     protected float detectionR = 50;
     protected Collider[] colliders;
 
@@ -28,7 +30,8 @@ public class InteractiveObjects : MonoBehaviour, IInteractive
 
     [Tooltip("Fill fields if object has a dialogue reaction")]
     [Header("Dialogue Text")]
-    [SerializeField] protected Text textArea = null;
+    [SerializeField]
+    protected Text textArea = null;
     protected IDialogue DialogueTxt = null;
     public bool isAvailable { get; set; }
 
@@ -36,6 +39,7 @@ public class InteractiveObjects : MonoBehaviour, IInteractive
 
     protected void Start()
     {
+        viewManager = FindObjectOfType<ViewManager>();
         _requiredObject = requiredObject.ToString();
 
         if (player == null)

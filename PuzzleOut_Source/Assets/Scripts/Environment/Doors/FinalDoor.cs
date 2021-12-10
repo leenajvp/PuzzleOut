@@ -8,24 +8,34 @@ public class FinalDoor : InteractiveObjects, IActivator
     public bool unlocked;
     public bool open;
     public bool isPassed { get; set; }
-    [SerializeField] private float doorOpenAngle = 55.0f;
-    [SerializeField] private float speed = 0.01f;
-    [SerializeField] private float defaultRotationAngle;
-    [SerializeField] private float currentRotationAngle;
-    [SerializeField] private float openTime = 0;
+    [SerializeField] 
+    private float doorOpenAngle = 55.0f;
+    [SerializeField] 
+    private float speed = 0.01f;
+    [SerializeField] 
+    private float defaultRotationAngle;
+    [SerializeField] 
+    private float currentRotationAngle;
+    [SerializeField] 
+    private float openTime = 0;
     private bool entering;
 
-    [SerializeField] private GameObject receivedKey = null;
-    private Animator Anim => GetComponent<Animator>();
+    [SerializeField] 
+    private GameObject receivedKey = null;
+    private Animator Anim; 
 
     [Header("Sound Effects")]
-    [SerializeField] private AudioSource doorSlide = null;
-    [SerializeField] private AudioSource keySound = null;
-    [SerializeField] private AudioSource needKey = null;
+    [SerializeField] 
+    private AudioSource doorSlide = null;
+    [SerializeField] 
+    private AudioSource keySound = null;
+    [SerializeField] 
+    private AudioSource needKey = null;
 
     private new void Start()
     {
         base.Start();
+        Anim = GetComponent<Animator>();
 
         receivedKey.SetActive(false);
         isAvailable = true;
@@ -138,7 +148,7 @@ public class FinalDoor : InteractiveObjects, IActivator
 
         unlocked = true;
         receivedKey.SetActive(false);
-        ViewMngr.camIsForced = true;
+        viewManager.camIsForced = true;
         open = true;
         doorSlide.Play();
     }

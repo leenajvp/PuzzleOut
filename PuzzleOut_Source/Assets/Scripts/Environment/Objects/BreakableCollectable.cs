@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class BreakableCollectable : Collectable, IInteractive, ICollectable
 {
-    [SerializeField] private GameObject singlereplacement = null;
-    [SerializeField] private AudioSource breakingSound = null;
+    [SerializeField] 
+    private GameObject singlereplacement = null;
+    [SerializeField] 
+    private AudioSource breakingSound = null;
 
     public void BreakObject()
     {

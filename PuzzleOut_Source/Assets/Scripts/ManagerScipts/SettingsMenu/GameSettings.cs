@@ -12,15 +12,19 @@ public class GameSettings : MonoBehaviour
     private static int dvalue;
 
     [Header("Audio Settings")]
-    [SerializeField] private Toggle sounds = null;
+    [SerializeField] 
+    private Toggle sounds = null;
     [Tooltip("AudioListener in the scene must be added")]
-    [SerializeField] private AudioListener gameSounds = null;
+    [SerializeField] 
+    private AudioListener gameSounds = null;
 
     [Header("Remove Flickering Lights")]
-    [SerializeField] private Toggle flashingLights = null;
+    [SerializeField] 
+    private Toggle flashingLights = null;
 
     [Header("Colorblind Mode")]
-    [SerializeField] private Toggle easyMode = null;
+    [SerializeField] 
+    private Toggle easyMode = null;
 
     private void Start()
     {
