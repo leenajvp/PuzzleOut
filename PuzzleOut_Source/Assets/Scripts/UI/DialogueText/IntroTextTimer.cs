@@ -8,7 +8,7 @@ public class IntroTextTimer : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("First") == 0)
+        if (PlayerPrefs.GetInt("FirstRoomCompleted") == 0)
         {
             for (int i = 0; i < uiObjects.Length; i++)
             {

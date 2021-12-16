@@ -49,7 +49,7 @@ public class ButtonPuzzle : MonoBehaviour, IInteractive
         savingImage.SetActive(false);
         
 
-        if (PlayerPrefs.GetInt("First") == 1)
+        if (PlayerPrefs.GetInt("FirstRoomCompleted") == 1)
         {
             isAvailable = false;
             buttonUI.SetActive(false);

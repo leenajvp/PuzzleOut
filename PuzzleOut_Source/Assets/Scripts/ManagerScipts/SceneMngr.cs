@@ -88,7 +88,7 @@ public class SceneMngr : MonoBehaviour
 
     public void InGameBackToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuLvl");
     }
 
     public void GameWon()

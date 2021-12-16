@@ -16,8 +16,10 @@ public class ViewManager : PlayerDeactivator
     [Header("Force camera back to default")]
     public bool camIsForced = false;
 
-    private void Start()
+    private new void Start()
     {
+        base.Start();
+
         if (mousepointer == null)
         {
             mousepointer = GameObject.FindGameObjectWithTag("MousePointer");

@@ -9,8 +9,13 @@ public class PlayerDeactivator : MonoBehaviour
     [SerializeField]
     protected CameraController cameraControl;
 
-    private void Start()
+    protected void Start()
     {
+        if (player == null)
+        {
+            player= FindObjectOfType<PlayerController1>().gameObject;
+        }
+
         playerControl = player.GetComponent<PlayerController1>();
         cameraControl = player.GetComponent<CameraController>();
     }
