@@ -1,7 +1,7 @@
 # PuzzleOut
 ### Horror escape room game prototype.
 
-A game prototype created for an individual University project.
+A game prototype created for an individual University project. Game sounds are sourced as credited.
 
 # Credits
 ### Leena Jarvenpaa
