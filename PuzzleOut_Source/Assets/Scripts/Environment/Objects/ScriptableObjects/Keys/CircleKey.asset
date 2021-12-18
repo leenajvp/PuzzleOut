@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a96ef8e0bf0d5142b421291fb1b21b5, type: 3}
+  m_Name: CircleKey
+  m_EditorClassIdentifier: 
+  objectType: 3
+  throwStrenght: 30
+  dropSound: {fileID: 8300000, guid: 9e019b4ae3db3b045ae8135cd720038f, type: 3}
+  volume: 0.2
+  setMaterial: {fileID: 13400000, guid: 1b7b7746645a06740a8f9d05a4d86214, type: 2}
+  isBreakable: 0
+  brokenReplacement: {fileID: 0}

@@ -60,6 +60,8 @@ public class PlayerController1 : MonoBehaviour, IControls, IPlayer
     [Header("Sound Effects")]
     [SerializeField] 
     private AudioSource walking = null;
+    [SerializeField]
+    private AudioSource pickUp = null;
 
     [Header("Completed Puzzles manager")]
     public int completed;
@@ -194,6 +196,7 @@ public class PlayerController1 : MonoBehaviour, IControls, IPlayer
                 if (hitCollectable != null && Input.GetMouseButtonDown(0))
                 {
                     hitCollectable.Collect();
+                    pickUp.Play();
                     collectedObject = hit.collider.gameObject;
                 }
 

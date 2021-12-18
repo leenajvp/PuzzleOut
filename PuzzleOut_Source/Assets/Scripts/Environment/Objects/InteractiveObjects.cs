@@ -58,6 +58,9 @@ public class InteractiveObjects : MonoBehaviour, IInteractive
 
     protected void SetTextArea(string text)
     {
-        textArea.text = text;
+        if (textArea != null)
+        {
+            textArea.text = text;
+        }
     }
 }

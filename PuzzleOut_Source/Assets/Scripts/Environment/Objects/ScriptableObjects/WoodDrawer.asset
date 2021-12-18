@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a96ef8e0bf0d5142b421291fb1b21b5, type: 3}
+  m_Name: WoodDrawer
+  m_EditorClassIdentifier: 
+  objectType: 0
+  throwStrenght: 30
+  dropSound: {fileID: 8300000, guid: 5cb0b1f83f335624992757ba23195ef0, type: 3}
+  volume: 0.3
+  setMaterial: {fileID: 13400000, guid: 00596ae6e8e7959429fb81c3f931efe9, type: 2}
+  isBreakable: 1
+  brokenReplacement: {fileID: 6128630224942571220, guid: 2ea39fedfe5e553448328e4dc46415a0,
+    type: 3}
