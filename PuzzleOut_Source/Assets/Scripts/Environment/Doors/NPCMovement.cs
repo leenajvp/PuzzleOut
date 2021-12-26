@@ -305,7 +305,6 @@ public class NPCMovement : InteractiveObjects
 
             if (Input.GetKey(yes))
             {
-
                 finalQuestion.SetActive(false);
                 CurrentState = NpcState.Kill;
             }
@@ -367,9 +366,12 @@ public class NPCMovement : InteractiveObjects
     {
         GameManager.canPause = false;
 
+        animator.SetInteger(animState, 3);
+
         if (currentAnim == 3 && DeadReaction.isPlaying == false)
         {
             DeadReaction.Play();
+            Debug.Log("you dead");
         }
 
         if (currentAnim != 3 && DeadReaction.isPlaying == true)
@@ -377,7 +379,8 @@ public class NPCMovement : InteractiveObjects
             DeadReaction.Stop();
         }
 
-        animator.SetInteger(animState, 3);
+        player.GetComponent<KeyboardController>().enabled = false;
+        player.GetComponent<CameraController>().mSensitivity = 0;
 
         yield return new WaitForSeconds(1);
 

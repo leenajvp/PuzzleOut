@@ -60906,6 +60906,36 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7446003119154386510, guid: f6746007953b7074e804e4e2dc58cced,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446003119154386510, guid: f6746007953b7074e804e4e2dc58cced,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446003119154386510, guid: f6746007953b7074e804e4e2dc58cced,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446003119154386510, guid: f6746007953b7074e804e4e2dc58cced,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446003119154386511, guid: f6746007953b7074e804e4e2dc58cced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.494
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446003119154386511, guid: f6746007953b7074e804e4e2dc58cced,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7446003119299486457, guid: f6746007953b7074e804e4e2dc58cced,
         type: 3}
       propertyPath: m_Range
