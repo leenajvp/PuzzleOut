@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a96ef8e0bf0d5142b421291fb1b21b5, type: 3}
   m_Name: Key
   m_EditorClassIdentifier: 
-  objectType: 5
+  objectType: 4
   throwStrenght: 50
   dropSound: {fileID: 8300000, guid: 303c98ab1b49ae74686fc30c6b3c9c39, type: 3}
   volume: 0.3

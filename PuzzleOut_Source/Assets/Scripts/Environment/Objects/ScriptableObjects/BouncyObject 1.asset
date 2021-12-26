@@ -19,3 +19,5 @@ MonoBehaviour:
   setMaterial: {fileID: 13400000, guid: 1b7b7746645a06740a8f9d05a4d86214, type: 2}
   isBreakable: 0
   brokenReplacement: {fileID: 0}
+  changesOnDrop: 0
+  updateCollectableType: {fileID: 0}

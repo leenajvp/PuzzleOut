@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a96ef8e0bf0d5142b421291fb1b21b5, type: 3}
+  m_Name: House
+  m_EditorClassIdentifier: 
+  objectType: 0
+  throwStrenght: 50
+  dropSound: {fileID: 8300000, guid: 5cb0b1f83f335624992757ba23195ef0, type: 3}
+  volume: 0.2
+  setMaterial: {fileID: 13400000, guid: 00596ae6e8e7959429fb81c3f931efe9, type: 2}
+  isBreakable: 0
+  brokenReplacement: {fileID: 0}
+  changesOnDrop: 1
+  updateCollectableType: {fileID: 11400000, guid: d6b3864615517af4d87032648a0028c5,
+    type: 2}

@@ -32,4 +32,10 @@ public class CollectablesData : ScriptableObject
     [Tooltip("Called by Script Breakable object, if true, object will break on when colliding with walls or floor")]
     public bool isBreakable;
     public GameObject brokenReplacement;
+
+
+    [Header("Change Object Type on Drop")]
+    [Tooltip("Object type that is changed after being dropped")]
+    public bool changesOnDrop;
+    public CollectablesData updateCollectableType;
 }

@@ -119,6 +119,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -143,6 +144,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8613552331474729950
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +205,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -227,6 +230,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1601051182542350254
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -269,9 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3663751feb62729468526cc682dd2b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 5
-  throwStrenght: 30
-  CollectSound: {fileID: 0}
-  detectionR: 5
-  breakThis: 0
-  isCollected: 0
+  collectableType: {fileID: 11400000, guid: a97077e9ba2c5a941bb0272e71706029, type: 2}
+  itemHoldPos: {fileID: 0}
+  player: {fileID: 0}
+  breakOnStart: 0

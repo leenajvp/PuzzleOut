@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1907421004638493825}
   - component: {fileID: 1907421004638493837}
   - component: {fileID: 6970543717818899502}
-  - component: {fileID: 3895546891225184596}
   - component: {fileID: 6752699523492504760}
   m_Layer: 8
   m_Name: FinalKey1
@@ -60,6 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &1907421004638493825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,14 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3663751feb62729468526cc682dd2b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredObject: 0
+  collectableType: {fileID: 11400000, guid: 6e53bdd6124015f4ca686615322a83dc, type: 2}
+  itemHoldPos: {fileID: 0}
   player: {fileID: 0}
-  textArea: {fileID: 0}
-  objectType: 4
-  throwStrenght: 30
-  CollectSound: {fileID: 0}
-  breakThis: 0
-  isCollected: 0
 --- !u!82 &6970543717818899502
 AudioSource:
   m_ObjectHideFlags: 0
@@ -216,26 +212,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3895546891225184596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637600102314254804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b065182da276e047be9b08173534ae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredObject: 0
-  player: {fileID: 0}
-  textArea: {fileID: 0}
-  objectType: 4
-  throwStrenght: 40
-  CollectSound: {fileID: 0}
-  breakThis: 0
-  isCollected: 0
 --- !u!136 &6752699523492504760
 CapsuleCollider:
   m_ObjectHideFlags: 0

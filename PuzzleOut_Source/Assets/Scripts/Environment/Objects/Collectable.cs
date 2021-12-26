@@ -11,6 +11,7 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
     private GameObject itemHoldPos;
     [SerializeField]
     private GameObject player;
+    private bool isCollected;
 
     [Header("Get Player Inventory")]
     private PlayerInventory inventory;
@@ -22,6 +23,9 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
     protected AudioSource hitSound;
     private Collider col;
 
+    [SerializeField]
+    bool breakOnStart;
+
     public bool isAvailable { get; set; }
 
     protected void Start()
@@ -29,7 +33,7 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
         rb = gameObject.GetComponent<Rigidbody>();
         isAvailable = true;
         gameObject.name = collectableType.objectType.ToString();
-
+        isCollected = false;
 
             hitSound = GetComponent<AudioSource>();
             hitSound.playOnAwake = false;
@@ -68,7 +72,7 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
             transform.localPosition = Vector3.zero;
             transform.localEulerAngles = Vector3.zero;
             rb.isKinematic = true;
-//            isCollected = true;
+            isCollected = true;
         }
 
         else
@@ -109,6 +113,22 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
             if (hitSound != null)
             {
                 hitSound.Play();
+            }
+        }
+
+        if (breakOnStart)
+        {
+            BreakObject();
+        }
+
+        if (collectableType.changesOnDrop == true && isCollected == true && collision.gameObject.tag == ("Environment"))
+        {
+            collectableType = collectableType.updateCollectableType;
+            gameObject.name = collectableType.objectType.ToString();
+
+            if (transform.childCount != 0)
+            {
+                transform.DetachChildren();
             }
         }
     }
