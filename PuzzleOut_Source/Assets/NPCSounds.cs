@@ -3,130 +3,148 @@
 public class NPCSounds : MonoBehaviour
 {
     [Header("NPC Sounds")]
-    [SerializeField] private AudioSource DraggingFeet = null;
-    [SerializeField] private AudioSource Mumbles = null;
-    [SerializeField] private AudioSource Attack = null;
-    [SerializeField] private AudioSource Wonder = null;
-    [SerializeField] private AudioSource GiveKey = null;
-    [SerializeField] private AudioSource TongueIdle = null;
-    [SerializeField] private AudioSource TongueIn = null;
+    [SerializeField]
+    AudioSource draggingFeet = null;
+    [SerializeField]
+    AudioSource mumbles = null;
+    [SerializeField]
+    AudioSource attack = null;
+    [SerializeField]
+    AudioSource wonder = null;
+    [SerializeField]
+    AudioSource giveKey = null;
+    [SerializeField]
+    AudioSource tongueIdle = null;
+    [SerializeField]
+    AudioSource tongueIn = null;
+    [SerializeField]
+    AudioSource playerDead = null;
 
-    private Animator AnimState => GetComponent<Animator>();
-    private int CurrentAnim => AnimState.GetInteger("AnimState");
+    private Animator animator;
+    private int currentAnim;
+    private static readonly int animState = Animator.StringToHash("AnimState");
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        
+    }
 
     void Update()
     {
+        currentAnim = animator.GetInteger(animState);
+
         // walk
-        if (DraggingFeet != null)
+        if (draggingFeet != null)
         {
-            if (CurrentAnim == 1 && DraggingFeet.isPlaying == false)
+            if (currentAnim == 1 && draggingFeet.isPlaying == false)
             {
-                DraggingFeet.Play();
+                draggingFeet.Play();
             }
 
-            if (CurrentAnim != 1 && DraggingFeet.isPlaying == true)
+            if (currentAnim != 1 && draggingFeet.isPlaying == true)
             {
-                DraggingFeet.Stop();
+                draggingFeet.Stop();
             }
         }
 
-        if (Mumbles != null)
+        if (mumbles != null)
         {
-            if (CurrentAnim == 1 && DraggingFeet.isPlaying == false)
+            if (currentAnim == 1 && draggingFeet.isPlaying == false)
             {
-                Mumbles.Play();
+                mumbles.Play();
             }
 
-            if (CurrentAnim != 1 && DraggingFeet.isPlaying == true)
+            if (currentAnim != 1 && draggingFeet.isPlaying == true)
             {
-                Mumbles.Stop();
+                mumbles.Stop();
             }
 
             //idle
 
-            if (CurrentAnim == 0 && Mumbles.isPlaying == false)
+            if (currentAnim == 0 && mumbles.isPlaying == false)
             {
-                Mumbles.Play();
+                mumbles.Play();
             }
 
-            if (CurrentAnim != 0 && Mumbles.isPlaying == true)
+            if (currentAnim != 0 && mumbles.isPlaying == true)
             {
-                Mumbles.Stop();
+                mumbles.Stop();
             }
         }
 
-        if (Wonder != null)
+        if (wonder != null)
         {
             //receiving object
 
-            if (CurrentAnim == 2 && Wonder.isPlaying == false)
+            if (currentAnim == 2 && wonder.isPlaying == false)
             {
-                Wonder.Play();
+                wonder.Play();
             }
 
-            if (CurrentAnim != 2 && Wonder.isPlaying == true)
+            if (currentAnim != 2 && wonder.isPlaying == true)
             {
-                Wonder.Stop();
+                wonder.Stop();
             }
         }
 
-        if (GiveKey != null)
+        if (giveKey != null)
         {
             //give key
 
-            if (CurrentAnim == 4 && GiveKey.isPlaying == false)
+            if (currentAnim == 4 && giveKey.isPlaying == false)
             {
-                GiveKey.Play();
+                giveKey.Play();
             }
 
-            if (CurrentAnim != 4 && GiveKey.isPlaying == true)
+            if (currentAnim != 4 && giveKey.isPlaying == true)
             {
-                GiveKey.Stop();
+                giveKey.Stop();
             }
         }
 
-        if (TongueIdle != null)
+        if (tongueIdle != null)
         {
             // Tongue Idle
 
-            if (CurrentAnim == 5 && TongueIdle.isPlaying == false)
+            if (currentAnim == 5 && tongueIdle.isPlaying == false)
             {
-                TongueIdle.Play();
+                tongueIdle.Play();
             }
 
-            if (CurrentAnim != 5 && TongueIdle.isPlaying == true)
+            if (currentAnim != 5 && tongueIdle.isPlaying == true)
             {
-                TongueIdle.Stop();
+                tongueIdle.Stop();
             }
         }
 
-        if (TongueIn != null)
+        if (tongueIn != null)
         {
             //tongue in
 
-            if (CurrentAnim == 6 && TongueIn.isPlaying == false)
+            if (currentAnim == 6 && tongueIn.isPlaying == false)
             {
-                TongueIn.Play();
+                tongueIn.Play();
             }
 
-            if (CurrentAnim != 6 && TongueIn.isPlaying == true)
+            if (currentAnim != 6 && tongueIn.isPlaying == true)
             {
-                TongueIn.Stop();
+                tongueIn.Stop();
             }
         }
 
-        if (Attack != null)
+        if (attack != null)
         {
             //attack
 
-            if (CurrentAnim == 3 && Attack.isPlaying == false)
+            if (currentAnim == 3 && attack.isPlaying == false)
             {
-                Attack.Play();
+                attack.Play();
             }
 
-            if (CurrentAnim != 3 && Attack.isPlaying == true)
+            if (currentAnim != 3 && attack.isPlaying == true)
             {
-                Attack.Stop();
+                attack.Stop();
             }
         }
     }

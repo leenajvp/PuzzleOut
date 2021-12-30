@@ -73,7 +73,7 @@ public class NPCMovement : InteractiveObjects
         base.Start();
 
         animator = GetComponent<Animator>();
-        currentAnim = animator.GetInteger(animState);
+        
         SceneManager = FindObjectOfType<SceneMngr>();
         GameManager = FindObjectOfType<GameMngr>();
         Agent = GetComponent<NavMeshAgent>();
@@ -87,6 +87,7 @@ public class NPCMovement : InteractiveObjects
 
     private void Update()
     {
+        currentAnim = animator.GetInteger(animState);
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
         switch (CurrentState)
@@ -338,10 +339,6 @@ public class NPCMovement : InteractiveObjects
         {
             if (inventory.CollectedObjects[i].name == "Key")
             {
-                animator.SetInteger(animState, 6);
-
-                yield return new WaitForSeconds(0.9f);
-
                 animator.SetInteger(animState, 1);
                 CurrentState = NpcState.Unavailable;
             }
@@ -371,7 +368,6 @@ public class NPCMovement : InteractiveObjects
         if (currentAnim == 3 && DeadReaction.isPlaying == false)
         {
             DeadReaction.Play();
-            Debug.Log("you dead");
         }
 
         if (currentAnim != 3 && DeadReaction.isPlaying == true)

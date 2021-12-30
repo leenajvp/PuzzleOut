@@ -91,8 +91,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -242,33 +244,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6128}
     - Class: 114
-      Script: {instanceID: 6520}
+      Script: {instanceID: 6522}
     - Class: 114
-      Script: {instanceID: 6544}
+      Script: {instanceID: 6546}
     - Class: 114
-      Script: {instanceID: 6576}
+      Script: {instanceID: 6578}
     - Class: 114
-      Script: {instanceID: 6678}
+      Script: {instanceID: 6680}
     - Class: 114
-      Script: {instanceID: 6840}
+      Script: {instanceID: 6842}
     - Class: 114
-      Script: {instanceID: 6952}
+      Script: {instanceID: 6954}
     - Class: 114
-      Script: {instanceID: 7096}
+      Script: {instanceID: 7098}
     - Class: 114
-      Script: {instanceID: 7264}
+      Script: {instanceID: 7266}
     - Class: 114
-      Script: {instanceID: 7298}
+      Script: {instanceID: 7300}
     - Class: 114
-      Script: {instanceID: 7586}
+      Script: {instanceID: 7588}
     - Class: 114
-      Script: {instanceID: 7672}
+      Script: {instanceID: 7674}
     - Class: 114
-      Script: {instanceID: 7876}
+      Script: {instanceID: 7878}
     - Class: 114
-      Script: {instanceID: 7904}
+      Script: {instanceID: 7906}
     - Class: 114
-      Script: {instanceID: 30424}
+      Script: {instanceID: 31258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -347,7 +349,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5680}
     - Class: 114
-      Script: {instanceID: 75330}
+      Script: {instanceID: 90406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -408,9 +410,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6128}
     - Class: 114
-      Script: {instanceID: 6368}
+      Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 293252}
+      Script: {instanceID: 95932}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -539,27 +541,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6128}
     - Class: 114
-      Script: {instanceID: 6138}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 6368}
+      Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6384}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6494}
     - Class: 114
-      Script: {instanceID: 6542}
+      Script: {instanceID: 6544}
     - Class: 114
-      Script: {instanceID: 6858}
+      Script: {instanceID: 6860}
     - Class: 114
-      Script: {instanceID: 7096}
+      Script: {instanceID: 7098}
     - Class: 114
-      Script: {instanceID: 7150}
+      Script: {instanceID: 7152}
     - Class: 114
-      Script: {instanceID: 7454}
+      Script: {instanceID: 7456}
     - Class: 114
-      Script: {instanceID: 7680}
+      Script: {instanceID: 7682}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -626,9 +628,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6128}
     - Class: 114
-      Script: {instanceID: 6368}
-    - Class: 114
-      Script: {instanceID: 293252}
+      Script: {instanceID: 6370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -770,7 +770,7 @@ ScriptsOnlyBuild:
     className: RenderObjects
   - hash:
       serializedVersion: 2
-      Hash: 52c3597182be335e28c8b53f9c7c7714
+      Hash: d32a5fb48929d0fe98d582be0997400d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPCSounds
@@ -1574,6 +1574,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: 2261fc09173a92836f1cc057cc4f83ba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SquareKey
+  - hash:
+      serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1878,12 +1884,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExtraClues
-  - hash:
-      serializedVersion: 2
-      Hash: 2261fc09173a92836f1cc057cc4f83ba
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SquareKey
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenuLvl.unity

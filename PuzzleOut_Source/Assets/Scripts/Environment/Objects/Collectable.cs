@@ -7,11 +7,12 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
 {
     public CollectablesData collectableType;
 
-    [SerializeField] 
+    [SerializeField]
     private GameObject itemHoldPos;
     [SerializeField]
     private GameObject player;
     private bool isCollected;
+    public bool breakOnStart;
 
     [Header("Get Player Inventory")]
     private PlayerInventory inventory;
@@ -23,9 +24,6 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
     protected AudioSource hitSound;
     private Collider col;
 
-    [SerializeField]
-    bool breakOnStart;
-
     public bool isAvailable { get; set; }
 
     protected void Start()
@@ -35,12 +33,12 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
         gameObject.name = collectableType.objectType.ToString();
         isCollected = false;
 
-            hitSound = GetComponent<AudioSource>();
-            hitSound.playOnAwake = false;
-            hitSound.spatialBlend = 1f;
-            hitSound.clip = collectableType.dropSound;
-            hitSound.volume = collectableType.volume;
-        
+        hitSound = GetComponent<AudioSource>();
+        hitSound.playOnAwake = false;
+        hitSound.spatialBlend = 1f;
+        hitSound.clip = collectableType.dropSound;
+        hitSound.volume = collectableType.volume;
+
 
         col = GetComponent<Collider>();
         col.material = collectableType.setMaterial;
@@ -103,41 +101,52 @@ public class Collectable : MonoBehaviour, ICollectable, IInteractive
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (isReady)
+        if (collision.gameObject.tag == ("Environment"))
         {
-            if (collectableType.isBreakable == true && breakThis == true && collision.gameObject.tag == ("Environment"))
+            if (breakOnStart == true)
             {
-                BreakObject();
+                if (collectableType.isBreakable == true)
+                {
+                    BreakObject();
+                }
+
+                if (hitSound != null)
+                {
+                    rb.AddForce(transform.forward * collectableType.throwStrenght);
+                    hitSound.Play();
+                }
             }
 
-            if (hitSound != null)
+            if (isReady)
             {
-                hitSound.Play();
+                if (collectableType.isBreakable == true && breakThis == true)
+                {
+                    BreakObject();
+                }
+
+                if (hitSound != null)
+                {
+                    hitSound.Play();
+                }
             }
-        }
 
-        if (breakOnStart)
-        {
-            BreakObject();
-        }
-
-        if (collectableType.changesOnDrop == true && isCollected == true && collision.gameObject.tag == ("Environment"))
-        {
-            collectableType = collectableType.updateCollectableType;
-            gameObject.name = collectableType.objectType.ToString();
-
-            if (transform.childCount != 0)
+            if (collectableType.changesOnDrop == true && isCollected == true)
             {
-                transform.DetachChildren();
+                collectableType = collectableType.updateCollectableType;
+                gameObject.name = collectableType.objectType.ToString();
+
+                if (transform.childCount != 0)
+                {
+                    transform.DetachChildren();
+                }
             }
         }
     }
 
-
     private IEnumerator StartTimer()
     {
         yield return new WaitForSeconds(4f);
-        
+
         isReady = true;
     }
 }

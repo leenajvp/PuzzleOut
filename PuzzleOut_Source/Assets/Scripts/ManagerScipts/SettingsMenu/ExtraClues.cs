@@ -77,7 +77,6 @@ public class ExtraClues : MonoBehaviour
         if (existingTime >= triggerTime && isAvailable == true)
         {
             extraClueUI.SetActive(true);
-            Debug.Log("First");
 
             if (Input.GetKeyDown(KeyCode.E))
             {

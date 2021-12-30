@@ -129,6 +129,6 @@ public class SceneMngr : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuLvl");
     }
 }

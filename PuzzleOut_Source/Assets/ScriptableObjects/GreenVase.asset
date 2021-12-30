@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: 0
   throwStrenght: 30
-  dropSound: {fileID: 8300000, guid: a52c319eee3c76c4d9f432034a68db0f, type: 3}
+  dropSound: {fileID: 8300000, guid: 9e019b4ae3db3b045ae8135cd720038f, type: 3}
   volume: 0.5
   setMaterial: {fileID: 13400000, guid: 7c61e84b9632a1348bd680fb49943247, type: 2}
   isBreakable: 1
   brokenReplacement: {fileID: 2727768740794033799, guid: bd0700942db93f748bf83b3a3c06ced1,
     type: 3}
+  changesOnDrop: 0
+  updateCollectableType: {fileID: 0}

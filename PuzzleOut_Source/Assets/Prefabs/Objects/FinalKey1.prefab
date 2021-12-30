@@ -116,6 +116,7 @@ MonoBehaviour:
   collectableType: {fileID: 11400000, guid: 6e53bdd6124015f4ca686615322a83dc, type: 2}
   itemHoldPos: {fileID: 0}
   player: {fileID: 0}
+  breakOnStart: 1
 --- !u!82 &6970543717818899502
 AudioSource:
   m_ObjectHideFlags: 0
