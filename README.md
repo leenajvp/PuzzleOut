@@ -2,6 +2,7 @@
 ### Horror escape room game prototype.
 
 A game prototype created for an individual University project. Game sounds are sourced as credited.
+Playthrough available [here](https://youtu.be/lTmWbGe0s-U).
 
 # Credits
 ### Leena Jarvenpaa
