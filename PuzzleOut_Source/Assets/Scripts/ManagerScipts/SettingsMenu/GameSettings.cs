@@ -14,9 +14,8 @@ public class GameSettings : MonoBehaviour
     [Header("Audio Settings")]
     [SerializeField] 
     private Toggle sounds = null;
-    [Tooltip("AudioListener in the scene must be added")]
-    [SerializeField] 
-    private AudioListener gameSounds = null;
+    [SerializeField]
+    private Slider soundSlider = null;
 
     [Header("Remove Flickering Lights")]
     [SerializeField] 
@@ -67,6 +66,7 @@ public class GameSettings : MonoBehaviour
         if (PlayerPrefs.GetInt("SoundSettings") == 1)
         {
             sounds.isOn = true;
+            soundSlider.value = PlayerPrefs.GetFloat("VolumeSetting"); 
         }
 
         else
@@ -88,11 +88,7 @@ public class GameSettings : MonoBehaviour
 
     private void Update()
     {
-        if (gameSounds != null)
-        {
-            GameSoundsInCurrentScene();
-        }
-
+        GameSoundsInCurrentScene();
         DifficultySettings();
         PlayerControls();
         ManageLights();
@@ -181,12 +177,13 @@ public class GameSettings : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("SoundSettings") == 1)
         {
-            gameSounds.enabled = true;
+            AudioListener.volume = soundSlider.value;
+            PlayerPrefs.SetFloat("VolumeSetting", soundSlider.value);
         }
 
         else
         {
-            gameSounds.enabled = false;
+            AudioListener.volume = 0;
         }
     }
 }

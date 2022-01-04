@@ -112,6 +112,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
@@ -268,7 +269,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7906}
     - Class: 114
-      Script: {instanceID: 31258}
+      Script: {instanceID: 29012}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -347,7 +348,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5680}
     - Class: 114
-      Script: {instanceID: 36220}
+      Script: {instanceID: 24468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -410,7 +411,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 71724}
+      Script: {instanceID: 45628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -508,6 +509,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3988}
     - Class: 114
       Script: {instanceID: 4254}
+    - Class: 114
+      Script: {instanceID: 5014}
     - Class: 114
       Script: {instanceID: 5026}
     - Class: 114
@@ -678,7 +681,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector2
   - hash:
       serializedVersion: 2
-      Hash: 2fac2f82abaec7c99e80a1ee383266d3
+      Hash: 745928aec9ba4cb1726490ce1240cdaf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSettings
@@ -1889,5 +1892,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/LostScene.unity
   - Assets/Scenes/WinScene.unity
-  playerPath: "C:/Users/leena/OneDrive/Ty\xF6p\xF6yt\xE4/PuzzleOutBuildTest/Puzzle
-    Out.exe"
+  playerPath: D:/PortfolioProjects/PuzzleOutDemo/BuildPublish/Puzzle Out.exe

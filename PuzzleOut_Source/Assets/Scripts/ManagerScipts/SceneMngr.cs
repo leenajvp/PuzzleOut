@@ -4,9 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneMngr : MonoBehaviour
 {
-    private AudioListener gameSounds;
     private FlickeringLight[] Lights;
-    private MenuMusic MusicFade => GetComponent<MenuMusic>();
+    private MenuMusic MusicFade;
 
     private bool newGame = false;
     private bool loadGame = false;
@@ -14,7 +13,7 @@ public class SceneMngr : MonoBehaviour
 
     void Awake()
     {
-        gameSounds = FindObjectOfType<AudioListener>();
+        MusicFade = GetComponent<MenuMusic>();
         Lights = FindObjectsOfType<FlickeringLight>();
 
         newGame = false;
@@ -23,12 +22,12 @@ public class SceneMngr : MonoBehaviour
 
         if (PlayerPrefs.GetInt("SoundSettings") == 1)
         {
-            gameSounds.enabled = true;
+            AudioListener.volume = PlayerPrefs.GetFloat("VolumeSetting");
         }
 
         else
         {
-            gameSounds.enabled = false;
+            AudioListener.volume = 0;
         }
 
         if (PlayerPrefs.GetInt("LightSettings") == 1)
